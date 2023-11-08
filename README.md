@@ -47,7 +47,6 @@ classDiagram
   }
   
   class Quarto {
-    - estado : boolean
     - numeroQuarto : int
   }
   
@@ -66,7 +65,7 @@ classDiagram
   class Pagamento {
     <<abstract>>
     # valorBase : double
-    # dataPagamento
+    # dataPagamento : String 
     # metodoPagamento : getClass
     + calcularPagamento(): double
   }
