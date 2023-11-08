@@ -6,7 +6,7 @@ public abstract class Pagamento {
 
 	protected double valorBase;
 	protected String dataPagamento;
-	protected String metodoPagamento = getClass().getSimpleName();
+	protected String metodoPagamento;
 
 	public Pagamento() {
 		// TODO Auto-generated constructor stub
@@ -16,6 +16,7 @@ public abstract class Pagamento {
 		super();
 		this.valorBase = valorBase;
 		this.dataPagamento = dataPagamento;
+		this.metodoPagamento = getClass().getSimpleName();
 	}
 
 	public abstract void calcularPagamento();
