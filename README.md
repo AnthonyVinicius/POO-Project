@@ -71,7 +71,9 @@ classDiagram
   }
 
   class PagamentoCartao {
-    calcularPagamento():double
+   - numeroCartao : String
+   - tipoCartao : String 
+   calcularPagamento():double
   }
 
   class PagamentoDinheiro {
