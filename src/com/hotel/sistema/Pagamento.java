@@ -9,7 +9,8 @@ public abstract class Pagamento {
 	protected String metodoPagamento;
 
 	public Pagamento() {
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stub]
+		this.metodoPagamento = getClass().getSimpleName();
 	}
 
 	public Pagamento(double valorBase, String dataPagamento) {
