@@ -2,25 +2,25 @@ package com.hotel.sistema;
 
 public class Servico {
 	
-	private String discricao;
+	private String descricao;
 	private Pagamento pagamento;
 	
 	public Servico() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Servico(String discricao, Pagamento pagamento) {
+	public Servico(String descricao, Pagamento pagamento) {
 		super();
-		this.discricao = discricao;
+		this.descricao = descricao;
 		this.pagamento = pagamento;
 	}
 
-	public String getDiscricao() {
-		return discricao;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setDiscricao(String discricao) {
-		this.discricao = discricao;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public Pagamento getPagamento() {

@@ -20,7 +20,9 @@ public abstract class Pagamento {
 		this.metodoPagamento = getClass().getSimpleName();
 	}
 
-	public abstract void calcularPagamento();
+	public void calcularPagamento(){
+		double pagamento =  valorBase + 500;
+	}
 
 	public double getValorBase() {
 		return valorBase;
