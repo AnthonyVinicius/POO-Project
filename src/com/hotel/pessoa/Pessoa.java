@@ -9,7 +9,7 @@ public abstract class Pessoa {
 	protected String rg;
 	protected Endereco endereco;
 	protected Telefone telefone;
-
+	
 	public Pessoa() {
 		// TODO Auto-generated constructor stub
 	}
