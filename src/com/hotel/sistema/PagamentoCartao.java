@@ -16,7 +16,7 @@ public class PagamentoCartao extends Pagamento {
 	}
 
 
-// TODO: mplementar uma forma de pegar o valor base da classe Pagamento e calcular os juros somando com o valor base 
+// TODO: implementar uma forma de pegar o valor base da classe Pagamento e calcular os juros somando com o valor base 
 	
 
 	public String getNumero() {
