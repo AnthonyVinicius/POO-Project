@@ -1,5 +1,8 @@
 package com.hotel.pessoa;
 
+import com.hotel.sistema.Endereco;
+import com.hotel.sistema.Telefone;
+
 public class Funcionario extends Pessoa {
 
 	private String setor;
@@ -8,8 +11,8 @@ public class Funcionario extends Pessoa {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Funcionario(String setor) {
-		super();
+	public Funcionario(String nome, String rg, Endereco endereco, Telefone telefone, String setor) {
+		super(nome, rg, endereco, telefone);
 		this.setor = setor;
 	}
 
