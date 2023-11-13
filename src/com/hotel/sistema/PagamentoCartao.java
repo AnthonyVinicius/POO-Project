@@ -2,6 +2,7 @@
 package com.hotel.sistema;
 
 import java.security.InvalidParameterException;
+import java.util.List;
 
 public class PagamentoCartao extends Pagamento {
 
@@ -14,8 +15,8 @@ public class PagamentoCartao extends Pagamento {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PagamentoCartao(String dataPagamento, String numero, String tipoCartao) {
-		super(dataPagamento);
+	public PagamentoCartao(List<Quarto>listaDeQuartos ,String dataPagamento, String numero, String tipoCartao) {
+		super(listaDeQuartos,dataPagamento);
 		this.numero = numero;
 		this.tipoCartao = tipoCartao;
 		this.valorFinal = 0.0;

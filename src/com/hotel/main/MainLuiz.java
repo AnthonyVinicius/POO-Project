@@ -22,7 +22,7 @@ public class MainLuiz {
 		Cliente clienteJorge = new Cliente("Jorge", "12.568.95", enderecoJorge, telefoneJorge, "jorge157@gmail.com");
 
 		// Passar a quantidade de quartos
-		PagamentoCartao pagamentoJorge = new PagamentoCartao("12/11/2023",listaQuartosR1.size(),"4153 5969 4854 9585", "Debito");
+		PagamentoCartao pagamentoJorge = new PagamentoCartao(listaQuartosR1,"12/11/2023","4153 5969 4854 9585", "Debito");
 		System.out.println("Valor final: " + pagamentoJorge.getValorFinal());
 
 		Reserva reserva1 = new Reserva("12/11/2023", listaQuartosR1, funcionarioPedro, clienteJorge, pagamentoJorge);

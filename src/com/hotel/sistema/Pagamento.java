@@ -13,11 +13,13 @@ public abstract class Pagamento {
 	
 	public Pagamento() {
 		// TODO Auto-generated constructor stub]
+		this.valorBase = 125;
 		this.metodoPagamento = getClass().getSimpleName();
 	}
 
-	public Pagamento(String dataPagamento) {
+	public Pagamento(List<Quarto>listaDeQuartos,String dataPagamento) {
 		super();
+		this.listaDeQuartos = listaDeQuartos;
 		this.valorBase = 125;
 		this.dataPagamento = dataPagamento;
 		this.metodoPagamento = getClass().getSimpleName();
