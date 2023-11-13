@@ -57,11 +57,7 @@ classDiagram
   class Hotel {
     - nome : String
   }
-  
-  class Servico {
-    - descricao : String
-  }
-  
+
   class Pagamento {
     <<abstract>>
     # valorBase : double
@@ -87,15 +83,15 @@ classDiagram
   Endereco "1" <-- "1" Hotel
   Endereco "1"<-- "1"Pessoa
 
+
   Telefone "1"<-- "1"Pessoa
   Cliente "1"<-- "N"Reserva
   Funcionario "1"<-- "N"Reserva
   Quarto "N"<-- "N"Reserva
   Cama "1"<-- "1"Quarto
   Reserva "N" <-- "1" Hotel
-  Hotel "1" --> "N" Servico
+  Hotel "1" --> "1" Gerente
 
-  Servico "1" --> "1" Pagamento
   Reserva "N" --> "1"Pagamento
   
   Pagamento <|-- PagamentoCartao
