@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.hotel.pessoa.*;
 
-public class Main {
+public class MainAnthony {
 	public static void main(String[] args) {
 		
 		Endereco enderecoClienteMarcos = new Endereco();
@@ -24,7 +24,7 @@ public class Main {
 		clienteMarcos.setEndereco(enderecoClienteMarcos);
 		clienteMarcos.setTelefone(telefoneClienteMarcos);
 		
-		
+	
 		Endereco enderecoFuncionarioJoao = new Endereco();
 		enderecoFuncionarioJoao.setBairro("Carneiros");
 		enderecoFuncionarioJoao.setCidade("Caruaru");
@@ -115,10 +115,13 @@ public class Main {
 		listaQuartosReserva2ClienteMarcos.add(quarto1Reserva2ClienteMarcos);
 		listaQuartosReserva2ClienteMarcos.add(quarto2Reserva2ClienteMarcos);
 		
-		PagamentoDinheiro pagamentoCartaoReserva2ClienteMarcos = new PagamentoDinheiro();
+		PagamentoCartao pagamentoCartaoReserva2ClienteMarcos = new PagamentoCartao();
 		pagamentoCartaoReserva2ClienteMarcos.setMetodoPagamento("Cartão");
 		pagamentoCartaoReserva2ClienteMarcos.setDataPagamento("12/12/2003");
 		pagamentoCartaoReserva2ClienteMarcos.setValorBase(300.00);
+		pagamentoCartaoReserva2ClienteMarcos.setNumero("25125-1521-5505-4342");
+		pagamentoCartaoReserva2ClienteMarcos.setTipoCartao("Credito");
+		
 		
 		Reserva reserva2ClienteMarcos = new Reserva();
 		reserva2ClienteMarcos.setData("15/12/2003");
@@ -135,10 +138,8 @@ public class Main {
 		HotelbeiraMar.setNome("Beira Mar");
 		HotelbeiraMar.setEndereco(enderecoHotelBeiraMar);
 		HotelbeiraMar.setListaReservas(listaReservasClienteMarcos);
-		
-//		Telefone
-//		Servico
-		
+
+	
 		
 	}
 }

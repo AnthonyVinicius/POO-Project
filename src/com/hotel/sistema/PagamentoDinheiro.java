@@ -9,8 +9,8 @@
 			// TODO Auto-generated constructor stub
 		}
 
-		public PagamentoDinheiro(String dataPagamento, int numQuartos) {
-			super(dataPagamento, numQuartos);
+		public PagamentoDinheiro(String dataPagamento) {
+			super(dataPagamento);
 			this.valorFinal = 0;
 			// TODO Auto-generated constructor stub
 		}
@@ -18,8 +18,9 @@
 		// TODO: implementar uma forma de pegar o valor base da classe Pagamento
 		@Override
 		protected void calcularPagamento() {
-			valorBase = valorBase * numQuartos;
-			valorFinal = valorBase - valorBase * 0.05;
+			
+			valorBase *= listaDeQuartos.size();
+			valorFinal = valorBase * 1.05;
 			setValorFinal(valorFinal);
 	
 		}

@@ -8,13 +8,14 @@ public class PagamentoCartao extends Pagamento {
 	private String numero;
 	private String tipoCartao;
 	private double valorFinal;
+	
 
 	public PagamentoCartao() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PagamentoCartao(String dataPagamento, int numQuartos, String numero, String tipoCartao) {
-		super(dataPagamento, numQuartos);
+	public PagamentoCartao(String dataPagamento, String numero, String tipoCartao) {
+		super(dataPagamento);
 		this.numero = numero;
 		this.tipoCartao = tipoCartao;
 		this.valorFinal = 0.0;
@@ -25,14 +26,15 @@ public class PagamentoCartao extends Pagamento {
 
 	@Override
 	protected void calcularPagamento() {
-		valorBase *= numQuartos;
+		
+		valorBase *= listaDeQuartos.size();
 		
 		if (tipoCartao == "Debito") {
-			valorFinal = valorBase - valorBase * 0.05;
+			valorFinal = valorBase * 1.05;
 			setValorFinal(valorFinal);
 			
 		} else if (tipoCartao == "Credito") {
-			valorFinal = valorBase + valorBase * 0.02;
+			valorFinal = valorBase * 1.02;
 			setValorFinal(valorFinal);
 
 		} else {
