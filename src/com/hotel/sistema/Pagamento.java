@@ -3,7 +3,8 @@ package com.hotel.sistema;
 public abstract class Pagamento {
 
 	// TODO : Revisar esses essa forma de pegar o metodo de pagamento
-
+	
+	protected int numQuartos ;
 	protected double valorBase;
 	protected String dataPagamento;
 	protected String metodoPagamento;
@@ -13,15 +14,22 @@ public abstract class Pagamento {
 		this.metodoPagamento = getClass().getSimpleName();
 	}
 
-	public Pagamento(double valorBase, String dataPagamento) {
+	public Pagamento(String dataPagamento, int numQuartos) {
 		super();
-		this.valorBase = valorBase;
+		this.valorBase = 125;
 		this.dataPagamento = dataPagamento;
 		this.metodoPagamento = getClass().getSimpleName();
+		this.numQuartos = numQuartos;
 	}
 
-	public void calcularPagamento(){
-		double pagamento =  valorBase + 500;
+	protected abstract void calcularPagamento();
+
+	public int getNumQuartos() {
+		return numQuartos;
+	}
+
+	public void setNumQuartos(int numQuartos) {
+		this.numQuartos = numQuartos;
 	}
 
 	public double getValorBase() {
