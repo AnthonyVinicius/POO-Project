@@ -33,6 +33,7 @@ public class PagamentoCartao extends Pagamento {
 			
 		} else if (tipoCartao == "Credito") {
 			valorFinal = valorBase + valorBase * 0.02;
+			setValorFinal(valorFinal);
 
 		} else {
 			throw new InvalidParameterException("Tipo de Cartão invalido , tente novamente");

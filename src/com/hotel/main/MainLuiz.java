@@ -27,7 +27,7 @@ public class MainLuiz {
 
 		Reserva reserva1 = new Reserva("12/11/2023", listaQuartosR1, funcionarioPedro, clienteJorge, pagamentoJorge);
 
-		// Hotel: Palace Hotel
+		//----------------------------------------------------------Palace Hotel---------------------------------------------------------------------
 
 		ArrayList<Reserva> listaReservas = new ArrayList<Reserva>();
 		listaReservas.add(reserva1);
