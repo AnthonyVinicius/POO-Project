@@ -8,23 +8,21 @@ public class PagamentoDinheiro extends Pagamento {
 
 	public PagamentoDinheiro() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.valorFinal = 0;
 	}
-
-	public PagamentoDinheiro(List<Quarto> listaDeQuartos, String dataPagamento) {
-		super(listaDeQuartos, dataPagamento);
+	
+	public PagamentoDinheiro(List<Quarto> listaDeQuartos, String dataPagamento, List<Reserva> listaDeReservas) {
+		super(listaDeQuartos, dataPagamento, listaDeReservas);
 		this.valorFinal = 0;
 		// TODO Auto-generated constructor stub
 	}
 
-	// TODO: implementar uma forma de pegar o valor base da classe Pagamento
 	@Override
+	//TODO: Resolver esses B.O
 	protected void calcularPagamento() {
-
-		valorBase *= listaDeQuartos.size();
+		valorBase *= listaDeReservas
 		valorFinal = valorBase * 1.05;
 		setValorFinal(valorFinal);
-
 	}
 
 	public double getValorFinal() {

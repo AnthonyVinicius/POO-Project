@@ -5,27 +5,26 @@ import java.util.List;
 public abstract class Pagamento {
 
 	// TODO : Revisar esses essa forma de pegar o metodo de pagamento
-	
+
 	protected double valorBase;
 	protected String dataPagamento;
 	protected String metodoPagamento;
-	List<Quarto> listaDeQuartos;
-	
+	protected List<Reserva> listaDeReservas;
+
 	public Pagamento() {
 		// TODO Auto-generated constructor stub]
 		this.valorBase = 125;
 		this.metodoPagamento = getClass().getSimpleName();
 	}
 
-	public Pagamento(List<Quarto>listaDeQuartos,String dataPagamento) {
+	public Pagamento(List<Quarto> listaDeQuartos, String dataPagamento, List<Reserva> listaDeReservas) {
 		super();
-		this.listaDeQuartos = listaDeQuartos;
 		this.valorBase = 125;
 		this.dataPagamento = dataPagamento;
 		this.metodoPagamento = getClass().getSimpleName();
-	
+		this.listaDeReservas = listaDeReservas;
 	}
-
+	// Assinatura
 	protected abstract void calcularPagamento();
 
 	public double getValorBase() {
@@ -50,5 +49,13 @@ public abstract class Pagamento {
 
 	public void setMetodoPagamento(String metodoPagamento) {
 		this.metodoPagamento = metodoPagamento;
+	}
+
+	public List<Reserva> getListaDeReservas() {
+		return listaDeReservas;
+	}
+
+	public void setListaDeReservas(List<Reserva> listaDeReservas) {
+		this.listaDeReservas = listaDeReservas;
 	}
 }

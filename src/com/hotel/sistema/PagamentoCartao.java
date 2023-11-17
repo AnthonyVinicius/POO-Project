@@ -14,12 +14,12 @@ public class PagamentoCartao extends Pagamento {
 	public PagamentoCartao() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public PagamentoCartao(List<Quarto>listaDeQuartos ,String dataPagamento, String numero, String tipoCartao) {
-		super(listaDeQuartos,dataPagamento);
+	
+	public PagamentoCartao(List<Quarto> listaDeQuartos, String dataPagamento, List<Reserva> listaDeReservas,String numero, String tipoCartao) {
+		super(listaDeQuartos, dataPagamento, listaDeReservas);
 		this.numero = numero;
 		this.tipoCartao = tipoCartao;
-		this.valorFinal = 0.0;
+		this.valorFinal = 0;
 	}
 
 	// TODO: implementar uma forma de pegar o valor base da classe Pagamento e
