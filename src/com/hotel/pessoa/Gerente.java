@@ -11,8 +11,8 @@ public class Gerente extends Pessoa {
 
 	}
 
-	public Gerente(String nome, String rg, Endereco endereco, Telefone telefone, String codigoDeAcesso) {
-		super(nome, rg, endereco, telefone);
+	public Gerente(String nome, String cpf, Endereco endereco, Telefone telefone, String codigoDeAcesso) {
+		super(nome, cpf, endereco, telefone);
 		this.codigoDeAcesso = codigoDeAcesso;
 	}
 

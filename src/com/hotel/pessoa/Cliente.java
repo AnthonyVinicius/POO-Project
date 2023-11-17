@@ -17,8 +17,8 @@ public class Cliente extends Pessoa {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cliente(String email, List<Pagamento> listasPagamentos, List<Reserva> listasReservas) {
-		super();
+	public Cliente(String nome, String cpf, Endereco endereco, Telefone telefone, String email, List<Pagamento> listasPagamentos, List<Reserva> listasReservas) {
+		super(nome, cpf, endereco, telefone);
 		this.email = email;
 		this.listasPagamentos = listasPagamentos;
 		this.listasReservas = listasReservas;

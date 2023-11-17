@@ -6,18 +6,18 @@ import com.hotel.sistema.Telefone;
 public abstract class Pessoa {
 
 	protected String nome;
-	protected String rg;
+	protected String cpf;
 	protected Endereco endereco;
 	protected Telefone telefone;
-	
+
 	public Pessoa() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Pessoa(String nome, String rg, Endereco endereco, Telefone telefone) {
+	public Pessoa(String nome, String cpf, Endereco endereco, Telefone telefone) {
 		super();
 		this.nome = nome;
-		this.rg = rg;
+		this.cpf = cpf;
 		this.endereco = endereco;
 		this.telefone = telefone;
 	}
@@ -30,12 +30,12 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 
-	public String getRg() {
-		return rg;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setRg(String rg) {
-		this.rg = rg;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	public Endereco getEndereco() {

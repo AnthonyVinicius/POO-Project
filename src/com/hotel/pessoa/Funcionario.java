@@ -11,8 +11,8 @@ public class Funcionario extends Pessoa {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Funcionario(String nome, String rg, Endereco endereco, Telefone telefone, String setor) {
-		super(nome, rg, endereco, telefone);
+	public Funcionario(String nome, String cpf, Endereco endereco, Telefone telefone, String setor) {
+		super(nome, cpf, endereco, telefone);
 		this.setor = setor;
 	}
 
