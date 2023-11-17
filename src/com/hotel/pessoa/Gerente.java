@@ -8,7 +8,7 @@ public class Gerente extends Pessoa {
 	private String codigoDeAcesso;
 
 	public Gerente() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Gerente(String nome, String rg, Endereco endereco, Telefone telefone, String codigoDeAcesso) {
