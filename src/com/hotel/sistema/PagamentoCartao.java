@@ -29,7 +29,7 @@ public class PagamentoCartao extends Pagamento {
 	@Override
 	protected void calcularPagamento() {
 
-		if (tipoCartao == "Debito") {
+		if (tipoCartao.equalsIgnoreCase("Debito")) {
 			double somaTotal = 0;
 			ArrayList<Double> todosOsValores = new ArrayList<Double>();
 			for (Reserva reserva : listaDeReservas) {
@@ -52,7 +52,7 @@ public class PagamentoCartao extends Pagamento {
 				System.out.println("--------------------------------------------------------------");
 			}
 
-		} else if (tipoCartao == "Credito") {
+		} else if (tipoCartao.equalsIgnoreCase("Credito")) {
 			double somaTotal = 0;
 			ArrayList<Double> todosOsValores = new ArrayList<Double>();
 			for (Reserva reserva : listaDeReservas) {
