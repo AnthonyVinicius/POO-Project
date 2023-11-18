@@ -28,6 +28,19 @@ public class Hotel {
 		this.listaTelefones = listaTelefones;
 		this.listaReservas = listaReservas;
 	}
+	
+	public void mostrarInformacoesReservas() {
+		for (Reserva reserva : listaReservas) {
+			System.out.println(reserva.getData());
+			System.out.println(reserva.getFuncionario().getNome());
+			System.out.println(reserva.getFuncionario().getSetor());
+			System.out.println(reserva.getCliente().getNome());
+			for(Quarto quarto : reserva.getListaQuartos()) {
+				System.out.println(quarto.getNumero());
+				System.out.println(quarto.getCama().get(0));
+			}
+		}
+	}
 
 	public String getNome() {
 		return nome;
