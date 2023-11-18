@@ -2,6 +2,7 @@
 package com.hotel.sistema;
 
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PagamentoCartao extends Pagamento {
@@ -9,14 +10,13 @@ public class PagamentoCartao extends Pagamento {
 	private String numero;
 	private String tipoCartao;
 	private double valorFinal;
-	
 
 	public PagamentoCartao() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public PagamentoCartao(List<Quarto> listaDeQuartos, String dataPagamento, List<Reserva> listaDeReservas,String numero, String tipoCartao) {
-		super(listaDeQuartos, dataPagamento, listaDeReservas);
+
+	public PagamentoCartao(String dataPagamento, List<Reserva> listaDeReservas, String numero, String tipoCartao) {
+		super(dataPagamento, listaDeReservas);
 		this.numero = numero;
 		this.tipoCartao = tipoCartao;
 		this.valorFinal = 0;
@@ -27,17 +27,52 @@ public class PagamentoCartao extends Pagamento {
 
 	@Override
 	protected void calcularPagamento() {
-		
-		valorBase *= listaDeQuartos.size();
-		
-		if (tipoCartao == "Debito") {
-			valorFinal = valorBase * 1.05;
-			setValorFinal(valorFinal);
-			
-		} else if (tipoCartao == "Credito") {
-			valorFinal = valorBase * 1.02;
-			setValorFinal(valorFinal);
 
+		if (tipoCartao == "Debito") {
+			double somaTotal = 0;
+			ArrayList<Double> todosOsValores = new ArrayList<Double>();
+			for (Reserva reserva : listaDeReservas) {
+				System.out.println("---------------------------------------------------");
+				System.out.println("Cliente: " + reserva.getCliente().getNome());
+				System.out.println("Cpf: " + reserva.getCliente().getCpf());
+
+				for (Quarto quarto : reserva.getListaQuartos()) {
+					System.out.println("Quarto : " + valorQuarto);
+					somaTotal += valorQuarto;
+
+					for (Cama cama : quarto.getCama()) {
+						System.out.println("Cama : " + valorCama);
+						somaTotal += valorCama;
+
+					}
+				}
+				valorFinal = somaTotal - somaTotal * 0.03;
+				System.out.println("Total: " + valorFinal);
+				System.out.println("--------------------------------------------------------------");
+			}
+
+		} else if (tipoCartao == "Credito") {
+			double somaTotal = 0;
+			ArrayList<Double> todosOsValores = new ArrayList<Double>();
+			for (Reserva reserva : listaDeReservas) {
+				System.out.println("---------------------------------------------------");
+				System.out.println("Cliente: " + reserva.getCliente().getNome());
+				System.out.println("Cpf: " + reserva.getCliente().getCpf());
+
+				for (Quarto quarto : reserva.getListaQuartos()) {
+					System.out.println("Quarto : " + valorQuarto);
+					somaTotal += valorQuarto;
+
+					for (Cama cama : quarto.getCama()) {
+						System.out.println("Cama : " + valorCama);
+						somaTotal += valorCama;
+
+					}
+				}
+				valorFinal = somaTotal + somaTotal * 0.05;
+				System.out.println("Total: " + valorFinal);
+				System.out.println("--------------------------------------------------------------");
+			}
 		} else {
 			throw new InvalidParameterException("Tipo de Cartão invalido , tente novamente");
 		}

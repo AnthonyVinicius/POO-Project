@@ -6,20 +6,23 @@ public abstract class Pagamento {
 
 	// TODO : Revisar esses essa forma de pegar o metodo de pagamento
 
-	protected double valorBase;
+	protected double valorQuarto;
+	protected double valorCama;
 	protected String dataPagamento;
 	protected String metodoPagamento;
 	protected List<Reserva> listaDeReservas;
 
 	public Pagamento() {
 		// TODO Auto-generated constructor stub]
-		this.valorBase = 125;
+		this.valorQuarto = 125;
+		this.valorCama = 25;
 		this.metodoPagamento = getClass().getSimpleName();
 	}
 
-	public Pagamento(List<Quarto> listaDeQuartos, String dataPagamento, List<Reserva> listaDeReservas) {
+	public Pagamento(String dataPagamento, List<Reserva> listaDeReservas) {
 		super();
-		this.valorBase = 125;
+		this.valorQuarto = 125;
+		this.valorCama = 25;
 		this.dataPagamento = dataPagamento;
 		this.metodoPagamento = getClass().getSimpleName();
 		this.listaDeReservas = listaDeReservas;
@@ -27,12 +30,20 @@ public abstract class Pagamento {
 	// Assinatura
 	protected abstract void calcularPagamento();
 
-	public double getValorBase() {
-		return valorBase;
+	public double getValorQuarto() {
+		return valorQuarto;
 	}
 
-	public void setValorBase(double valorBase) {
-		this.valorBase = valorBase;
+	public void setValorQuarto(double valorQuarto) {
+		this.valorQuarto = valorQuarto;
+	}
+
+	public double getValorCama() {
+		return valorCama;
+	}
+
+	public void setValorCama(double valorCama) {
+		this.valorCama = valorCama;
 	}
 
 	public String getDataPagamento() {
@@ -59,3 +70,4 @@ public abstract class Pagamento {
 		this.listaDeReservas = listaDeReservas;
 	}
 }
+

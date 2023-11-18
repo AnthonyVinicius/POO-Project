@@ -1,5 +1,7 @@
 package com.hotel.sistema;
 
+import java.util.ArrayList;
+
 import java.util.List;
 
 public class PagamentoDinheiro extends Pagamento {
@@ -10,19 +12,37 @@ public class PagamentoDinheiro extends Pagamento {
 		super();
 		this.valorFinal = 0;
 	}
-	
-	public PagamentoDinheiro(List<Quarto> listaDeQuartos, String dataPagamento, List<Reserva> listaDeReservas) {
-		super(listaDeQuartos, dataPagamento, listaDeReservas);
+
+	public PagamentoDinheiro(String dataPagamento, List<Reserva> listaDeReservas) {
+		super(dataPagamento, listaDeReservas);
 		this.valorFinal = 0;
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	//TODO: Resolver esses B.O
+	// TODO: Resolver esses B.O
 	protected void calcularPagamento() {
-		valorBase *= listaDeReservas
-		valorFinal = valorBase * 1.05;
-		setValorFinal(valorFinal);
+		double somaTotal = 0;
+		ArrayList<Double> todosOsValores = new ArrayList<Double>();
+		for (Reserva reserva : listaDeReservas) {
+			System.out.println("---------------------------------------------------");
+			System.out.println("Cliente: " + reserva.getCliente().getNome());
+			System.out.println("Cpf: " + reserva.getCliente().getCpf());
+
+			for (Quarto quarto : reserva.getListaQuartos()) {
+				System.out.println("Quarto : " + valorQuarto);
+				somaTotal += valorQuarto;
+
+				for (Cama cama : quarto.getCama()) {
+					System.out.println("Cama : " + valorCama);
+					somaTotal += valorCama;
+
+				}
+			}
+			valorFinal = somaTotal - somaTotal * 0.03;
+			System.out.println("Total: " + valorFinal);
+			System.out.println("--------------------------------------------------------------");
+		}
 	}
 
 	public double getValorFinal() {
