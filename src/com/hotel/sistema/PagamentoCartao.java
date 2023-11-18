@@ -7,8 +7,9 @@ import java.util.List;
 
 public class PagamentoCartao extends Pagamento {
 
-	private String numero;
 	private String tipoCartao;
+	private String numero;
+	
 	private double valorFinal;
 
 	public PagamentoCartao() {

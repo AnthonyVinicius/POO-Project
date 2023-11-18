@@ -8,6 +8,7 @@ public abstract class Pagamento {
 
 	protected double valorQuarto;
 	protected double valorCama;
+	
 	protected String dataPagamento;
 	protected String metodoPagamento;
 	protected List<Reserva> listaDeReservas;

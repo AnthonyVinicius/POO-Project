@@ -5,6 +5,7 @@ import java.util.List;
 public class Quarto {
 	
 	private int numero;
+	
 	private List<Cama> cama;
 	
 	public Quarto() {

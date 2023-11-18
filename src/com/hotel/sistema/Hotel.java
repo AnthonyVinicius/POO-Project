@@ -7,6 +7,8 @@ import com.hotel.pessoa.Gerente;
 public class Hotel {
 
 	private String nome;
+	private String cnpj;
+
 	private Endereco endereco;
 	private Gerente gerente;
 	private List<Telefone> listaTelefones;
@@ -16,10 +18,11 @@ public class Hotel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Hotel(String nome, Endereco endereco, Gerente gerente, List<Telefone> listaTelefones,
+	public Hotel(String nome, String cnpj, Endereco endereco, Gerente gerente, List<Telefone> listaTelefones,
 			List<Reserva> listaReservas) {
 		super();
 		this.nome = nome;
+		this.cnpj = cnpj;
 		this.endereco = endereco;
 		this.gerente = gerente;
 		this.listaTelefones = listaTelefones;
@@ -32,6 +35,14 @@ public class Hotel {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	public Endereco getEndereco() {
@@ -65,4 +76,7 @@ public class Hotel {
 	public void setListaReservas(List<Reserva> listaReservas) {
 		this.listaReservas = listaReservas;
 	}
+
+
+
 }

@@ -8,6 +8,7 @@ import com.hotel.pessoa.Funcionario;
 public class Reserva {
 
 	private String data;
+	
 	private Funcionario funcionario;
 	private Cliente cliente;
 	private Pagamento pagamento;
