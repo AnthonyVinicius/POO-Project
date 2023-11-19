@@ -20,7 +20,6 @@ public class MainAnthony {
 		
 		List<Telefone> telefones = new ArrayList<>();
 		
-		
 		Endereco enderecoCarlos = new Endereco("Caruaru","Olinda", "Rua a", "21B");
 		Telefone telefoneCarlos  = new Telefone("18","4445-4232");
 		Funcionario carlos = new Funcionario("Carlos", "123-546-424-44", enderecoCarlos, telefoneCarlos, "Recepção");
@@ -35,7 +34,6 @@ public class MainAnthony {
 		
 		PagamentoCartao cartaoJoao = new PagamentoCartao();
 		PagamentoDinheiro dinheiroJoao = new PagamentoDinheiro();
-		
 		
 		Cama cama1Quarto1Joao = new Cama("Simples");
 		Cama cama2Quarto1Joao = new Cama("Simples");
@@ -55,24 +53,28 @@ public class MainAnthony {
 		
 		cartaoJoao.setDataPagamento("15/12/2015");
 		cartaoJoao.setNumero("1234-4124-4213");
-		cartaoJoao.setMetodoPagamento("Credito");
+		cartaoJoao.setTipoCartao("Credito");
 		cartaoJoao.setReserva(reserva1Joao);
 		pagamentos.add(cartaoJoao);
 		
 		dinheiroJoao.setDataPagamento("12032015");
 		dinheiroJoao.setReserva(reserva2Joao);
-		dinheiroJoao.setMetodoPagamento("Dinheiro");
 		pagamentos.add(dinheiroJoao);
-		
 		
 		Telefone telefone1BeiraMar = new Telefone("18","3661-4232");
 		Telefone telefone2BeiraMar  = new Telefone("18","3661-4237 ");
 		telefones.add(telefone1BeiraMar);
 		telefones.add(telefone2BeiraMar);
+		
 		Endereco enderecoBeiraMar = new Endereco("Recife","Centro", "Rua X", "1444");
 		Hotel beiraMar = new Hotel("BeiraMar", "12.345.678/0001-00", enderecoBeiraMar, marcos, telefones, reservas);
 		
+		dinheiroJoao.calcularPagamento();
 		
+		cartaoJoao.calcularPagamento();
+		
+		System.out.println("Hotel:" + beiraMar.getNome());
+				
 		int r = 1;
 		for (Reserva elementoReserva : reservas) {
 			System.out.println(r + "°" + "Reserva: ");
@@ -91,6 +93,7 @@ public class MainAnthony {
 				for (Cama cama : quarto.getCama()) {
 					System.out.println("Cama: " + cama.getTipo());
 				}
+				
 			System.out.println("________________________________________________________________________");
 			}
 		}

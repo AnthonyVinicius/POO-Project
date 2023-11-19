@@ -22,9 +22,6 @@ public class PagamentoCartao extends Pagamento {
 		this.valorFinal = 0;
 	}
 
-	// TODO: implementar uma forma de pegar o valor base da classe Pagamento e
-	// calcular os juros somando com o valor base
-
 	@Override
 	public void calcularPagamento() {
 
@@ -33,8 +30,10 @@ public class PagamentoCartao extends Pagamento {
 			System.out.println("---------------------------------------------------");
 			System.out.println("Cliente: " + reserva.getCliente().getNome());
 			System.out.println("Cpf: " + reserva.getCliente().getCpf());
+			System.out.println("Forma de Pagamento: Cartão");
+			System.out.println("Desconto: 3%/m");
 			System.out.println("Numero do cartão:" + getNumero());
-			System.out.println("Tipo Cartão: " + getMetodoPagamento());
+			System.out.println("Tipo Cartão: " + getTipoCartao());
 
 			for (Quarto quarto : reserva.getListaQuartos()) {
 				System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
@@ -56,8 +55,10 @@ public class PagamentoCartao extends Pagamento {
 			System.out.println("---------------------------------------------------");
 			System.out.println("Cliente: " + reserva.getCliente().getNome());
 			System.out.println("Cpf: " + reserva.getCliente().getCpf());
-			System.out.println("Numero do cartão:" + getNumero());
-			System.out.println("Tipo Cartão: " + getMetodoPagamento());
+			System.out.println("Forma de Pagamento: Cartão");
+			System.out.println("Acrescimo: 5%");
+			System.out.println("Numero do cartão: " + getNumero());
+			System.out.println("Tipo Cartão: " + getTipoCartao());
 
 			for (Quarto quarto : reserva.getListaQuartos()) {
 				System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);

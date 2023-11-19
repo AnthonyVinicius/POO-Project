@@ -1,7 +1,5 @@
 package com.hotel.sistema;
 
-import java.util.List;
-
 public class PagamentoDinheiro extends Pagamento {
 
 	private double valorFinal;
@@ -18,12 +16,14 @@ public class PagamentoDinheiro extends Pagamento {
 	}
 
 	@Override
-	// TODO: Resolver esses B.O
+	// TODO: 
 	public void calcularPagamento() {
 		double somaTotal = 0;
 		System.out.println("---------------------------------------------------");
 		System.out.println("Cliente: " + reserva.getCliente().getNome());
 		System.out.println("Cpf: " + reserva.getCliente().getCpf());
+		System.out.println("Forma de pagamento: Dinheiro");
+		System.out.println("Desconto 3%");
 
 		for (Quarto quarto : reserva.getListaQuartos()) {
 			System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
