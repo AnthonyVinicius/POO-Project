@@ -29,14 +29,13 @@ public class MainAnthony {
 		Telefone telefoneMarcos  = new Telefone("81","8805-9932");
 		Gerente marcos = new Gerente("Marcos", "344-543-443-55", enderecoMarcos, telefoneMarcos, "5t36re");
 		
-		PagamentoCartao cartaoJoao = new PagamentoCartao("15/12/2015", reservas, "1234-4124-4213", "Credito");
-		pagamentos.add(cartaoJoao);
-		PagamentoDinheiro dinheiroJoao = new PagamentoDinheiro("12032015",reservas);
-		pagamentos.add(dinheiroJoao);
-		
 		Endereco enderecoJoao = new Endereco("Palmares","Nova Palmares", "Rua Z", "23B");
 		Telefone telefoneJoao  = new Telefone("18","1233-4232");
-		Cliente joaoCliente = new Cliente("Joao", "123-456-789-00",enderecoJoao, telefoneJoao, "joao@gmail.com", pagamentos, reservas);
+		Cliente joaoCliente = new Cliente("Joao", "123-456-789-00",enderecoJoao, telefoneJoao, "joao@gmail.com",pagamentos, reservas);
+		
+		PagamentoCartao cartaoJoao = new PagamentoCartao();
+		PagamentoDinheiro dinheiroJoao = new PagamentoDinheiro();
+		
 		
 		Cama cama1Quarto1Joao = new Cama("Simples");
 		Cama cama2Quarto1Joao = new Cama("Simples");
@@ -54,6 +53,16 @@ public class MainAnthony {
 		Reserva reserva2Joao = new Reserva("15/12/2015", quartos2, carlos, joaoCliente, dinheiroJoao);
 		reservas.add(reserva2Joao);
 		
+		cartaoJoao.setDataPagamento("15/12/2015");
+		cartaoJoao.setNumero("1234-4124-4213");
+		cartaoJoao.setMetodoPagamento("Credito");
+		cartaoJoao.setReserva(reserva1Joao);
+		pagamentos.add(cartaoJoao);
+		
+		dinheiroJoao.setDataPagamento("12032015");
+		dinheiroJoao.setReserva(reserva2Joao);
+		dinheiroJoao.setMetodoPagamento("Dinheiro");
+		pagamentos.add(dinheiroJoao);
 		
 		
 		Telefone telefone1BeiraMar = new Telefone("18","3661-4232");
@@ -62,8 +71,29 @@ public class MainAnthony {
 		telefones.add(telefone2BeiraMar);
 		Endereco enderecoBeiraMar = new Endereco("Recife","Centro", "Rua X", "1444");
 		Hotel beiraMar = new Hotel("BeiraMar", "12.345.678/0001-00", enderecoBeiraMar, marcos, telefones, reservas);
+		
+		
+		int r = 1;
+		for (Reserva elementoReserva : reservas) {
+			System.out.println(r + "°" + "Reserva: ");
+			System.out.println("Data: " + elementoReserva.getData());
+			System.out.println("Funcionario responsalvel: " + elementoReserva.getFuncionario().getNome());
+			System.out.println("Setor: " + elementoReserva.getFuncionario().getSetor());
+			System.out.println("Cliente: " + elementoReserva.getCliente().getNome());
+			r++;
 
-		beiraMar.mostrarInformacoesReservas();
+			int q = 1;
+			for (Quarto quarto : elementoReserva.getListaQuartos()) {
+				System.out.println(q + "°" + "Quarto");
+				System.out.println("Num: " + quarto.getNumero());
+				q++;
+				
+				for (Cama cama : quarto.getCama()) {
+					System.out.println("Cama: " + cama.getTipo());
+				}
+			System.out.println("________________________________________________________________________");
+			}
+		}
 	}
 }
 
