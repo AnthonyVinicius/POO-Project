@@ -1,7 +1,5 @@
 package com.hotel.sistema;
 
-import java.util.List;
-
 public abstract class Pagamento {
 
 	// TODO : Revisar esses essa forma de pegar o metodo de pagamento

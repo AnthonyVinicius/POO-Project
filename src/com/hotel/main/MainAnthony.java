@@ -30,7 +30,7 @@ public class MainAnthony {
 		
 		Endereco enderecoJoao = new Endereco("Palmares","Nova Palmares", "Rua Z", "23B");
 		Telefone telefoneJoao  = new Telefone("18","1233-4232");
-		Cliente joaoCliente = new Cliente("Joao", "123-456-789-00",enderecoJoao, telefoneJoao, "joao@gmail.com",pagamentos, reservas);
+		Cliente joaoCliente = new Cliente("Joao", "123-456-789-00",enderecoJoao, telefoneJoao, "joao@gmail.com", reservas);
 		
 		PagamentoCartao cartaoJoao = new PagamentoCartao();
 		PagamentoDinheiro dinheiroJoao = new PagamentoDinheiro();

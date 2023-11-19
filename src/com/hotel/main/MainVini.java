@@ -26,7 +26,7 @@ public class MainVini {
 		Telefone telefoneC1 = new Telefone("81", "97458-9123");
 		Endereco enderecoC1 = new Endereco("Palmares", "Newton Carneiro", "Rua 25", "3");
 		
-		Cliente clienteR1 = new Cliente("Paulo", "234.345.567-8", enderecoC1, telefoneC1, "paulo@gmail.com", null, reservas);
+		Cliente clienteR1 = new Cliente("Paulo", "234.345.567-8", enderecoC1, telefoneC1, "paulo@gmail.com", reservas);
 	
 		Cama camaR1 = new Cama("Simples");
 		camasR1.add(camaR1);
@@ -46,7 +46,7 @@ public class MainVini {
 		Telefone telefoneC2 = new Telefone("81", "99876-4567");
 		Endereco enderecoC2 = new Endereco("Palmares", "Nova Palmares", "Rua A", "7");
 		
-		Cliente clienteR2 = new Cliente("Vinicius", "776.546.345-78", enderecoC2, telefoneC2, "vini@gmail.com", null, reservas);
+		Cliente clienteR2 = new Cliente("Vinicius", "776.546.345-78", enderecoC2, telefoneC2, "vini@gmail.com", reservas);
 	
 		Cama camaR2 = new Cama("Duplo");
 		camasR2.add(camaR2);
