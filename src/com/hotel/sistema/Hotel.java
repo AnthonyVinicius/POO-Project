@@ -28,17 +28,25 @@ public class Hotel {
 		this.listaTelefones = listaTelefones;
 		this.listaReservas = listaReservas;
 	}
-	
+
 	public void mostrarInformacoesReservas() {
+		int r = 1;
 		for (Reserva reserva : listaReservas) {
-			System.out.println(reserva.getData());
-			System.out.println(reserva.getFuncionario().getNome());
-			System.out.println(reserva.getFuncionario().getSetor());
-			System.out.println(reserva.getCliente().getNome());
-			for(Quarto quarto : reserva.getListaQuartos()) {
-				System.out.println(quarto.getNumero());
+			System.out.println(r + "°" + "Reserva: ");
+			System.out.println("Data: " + reserva.getData());
+			System.out.println("Funcionario responsalvel: " + reserva.getFuncionario().getNome());
+			System.out.println("Setor: " + reserva.getFuncionario().getSetor());
+			System.out.println("Cliente: " + reserva.getCliente().getNome());
+			r++;
+
+			int q = 1;
+			for (Quarto quarto : reserva.getListaQuartos()) {
+				System.out.println(q + "°" + "Quarto");
+				System.out.println("Num: " + quarto.getNumero());
+				q++;
+				
 				for (Cama cama : quarto.getCama()) {
-					System.out.println(cama.getTipo());
+					System.out.println("Cama: " + cama.getTipo());
 				}
 			}
 		}
@@ -91,7 +99,5 @@ public class Hotel {
 	public void setListaReservas(List<Reserva> listaReservas) {
 		this.listaReservas = listaReservas;
 	}
-
-
 
 }
