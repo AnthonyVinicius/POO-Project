@@ -24,33 +24,33 @@ public class MainLuiz {
 
 		Endereco enderecoClienteR1 = new Endereco("Recife", "Boa Viagem", "Machado 98", "68");
 		Telefone telefoneClienteR1 = new Telefone("81", "98568-4513");
-		Cliente clienteLuizR1 = new Cliente(
-				"Luiz Gabriel", "999-888-777-66", enderecoClienteR1, telefoneClienteR1, "luizgabriel@gmail.com", null, null);
+		Cliente clienteLuizR1 = new Cliente("Luiz Gabriel", "999-888-777-66", enderecoClienteR1, telefoneClienteR1,
+				"luizgabriel@gmail.com", null, null);
 
 		PagamentoDinheiro pagamentoDinheiroR1 = new PagamentoDinheiro("12/11/2023", null);
 
 		Reserva reserva1 = new Reserva("12/11/2023", listaQuartosR1, funcionarioPedroR1, clienteLuizR1,
 				pagamentoDinheiroR1);
-		
+
 		pagamentoDinheiroR1.setReserva(reserva1);
 
 		// Reserva_2________________________________________________________________________________________________________________________________
-		
+
 		ArrayList<Quarto> listaQuartosR2 = new ArrayList<Quarto>();
 		listaQuartosR2.add(new Quarto(56, new ArrayList<Cama>(Arrays.asList(new Cama("Simples"), new Cama("Simples")))));
 		listaQuartosR2.add(new Quarto(58, new ArrayList<Cama>(Arrays.asList(new Cama("Dupla"), new Cama("Simples"), new Cama("Simples")))));
 
 		Endereco enderecoClienteR2 = new Endereco("Maceio", "Vila Velha", "Visconde", "386");
 		Telefone telefoneClienteR2 = new Telefone("82", "91259-4113");
-		Cliente clienteFlavioR2 = new Cliente(
-				"Flavio Nunes", "123-351-526-42", enderecoClienteR2, telefoneClienteR2,"flavionunes@gmail.com", null, null);
-		
+		Cliente clienteFlavioR2 = new Cliente("Flavio Nunes", "123-351-526-42", enderecoClienteR2, telefoneClienteR2,
+				"flavionunes@gmail.com", null, null);
+
 		PagamentoCartao pagamentoCartaoR2 = new PagamentoCartao("13/10/2023", null, "1226 4515 5454 1252", "Credito");
-		
-		Reserva reserva2 = new Reserva("13/10/2023", listaQuartosR2, funcionarioPedroR1, clienteFlavioR2, pagamentoCartaoR2);
-		
+
+		Reserva reserva2 = new Reserva("13/10/2023", listaQuartosR2, funcionarioPedroR1, clienteFlavioR2,
+				pagamentoCartaoR2);
+
 		pagamentoCartaoR2.setReserva(reserva2);
-		
 
 		// Gerente--------------------------------------------------------------------------------------------------------
 
@@ -71,5 +71,27 @@ public class MainLuiz {
 		Hotel hotel = new Hotel("Palace Hotel", "12.345.678/0001-00", enderecoHotel, gerenteHotel, listaTelefonesHotel,
 				listaReservas);
 
+		// Apresentação
+		// -------------------------------------------------------------------------------------------------------------------------------
+
+		System.out.println("Hotel: " + hotel.getNome());
+		System.out.println("Cnpj: " + hotel.getCnpj());
+		System.out.println(
+				"Cidade: " + hotel.getEndereco().getCidade() + 
+				" ; Bairro: " + hotel.getEndereco().getBairro()+ 
+				" ; Rua: " + hotel.getEndereco().getRua() + 
+				" ; Num: " + hotel.getEndereco().getNumero());
+
+		for (Telefone telefone : hotel.getListaTelefones()) {
+			System.out.print("Telefones: " + "(" + telefone.getDdd() + ") " + telefone.getNumero());
+			System.out.println();
+		}
+		
+		hotel.mostrarInformacoesReservas();
+
+		for (Reserva reserva : hotel.getListaReservas()) {
+			reserva.getPagamento().calcularPagamento();
+
+		}
 	}
 }
