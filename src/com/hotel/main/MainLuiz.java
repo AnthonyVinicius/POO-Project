@@ -25,7 +25,7 @@ public class MainLuiz {
 		Endereco enderecoClienteR1 = new Endereco("Recife", "Boa Viagem", "Machado 98", "68");
 		Telefone telefoneClienteR1 = new Telefone("81", "98568-4513");
 		Cliente clienteLuizR1 = new Cliente("Luiz Gabriel", "999-888-777-66", enderecoClienteR1, telefoneClienteR1,
-				"luizgabriel@gmail.com", null, null);
+				"luizgabriel@gmail.com", null);
 
 		PagamentoDinheiro pagamentoDinheiroR1 = new PagamentoDinheiro("12/11/2023", null);
 
@@ -43,7 +43,7 @@ public class MainLuiz {
 		Endereco enderecoClienteR2 = new Endereco("Maceio", "Vila Velha", "Visconde", "386");
 		Telefone telefoneClienteR2 = new Telefone("82", "91259-4113");
 		Cliente clienteFlavioR2 = new Cliente("Flavio Nunes", "123-351-526-42", enderecoClienteR2, telefoneClienteR2,
-				"flavionunes@gmail.com", null, null);
+				"flavionunes@gmail.com", null);
 
 		PagamentoCartao pagamentoCartaoR2 = new PagamentoCartao("13/10/2023", null, "1226 4515 5454 1252", "Credito");
 

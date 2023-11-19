@@ -10,17 +10,15 @@ import com.hotel.sistema.Telefone;
 public class Cliente extends Pessoa {
 
 	private String email;
-	private List<Pagamento> listasPagamentos;
 	private List<Reserva> listasReservas;
 
 	public Cliente() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cliente(String nome, String cpf, Endereco endereco, Telefone telefone, String email, List<Pagamento> listasPagamentos, List<Reserva> listasReservas) {
+	public Cliente(String nome, String cpf, Endereco endereco, Telefone telefone, String email, List<Reserva> listasReservas) {
 		super(nome, cpf, endereco, telefone);
 		this.email = email;
-		this.listasPagamentos = listasPagamentos;
 		this.listasReservas = listasReservas;
 	}
 
@@ -30,14 +28,6 @@ public class Cliente extends Pessoa {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public List<Pagamento> getListasPagamentos() {
-		return listasPagamentos;
-	}
-
-	public void setListasPagamentos(List<Pagamento> listasPagamentos) {
-		this.listasPagamentos = listasPagamentos;
 	}
 
 	public List<Reserva> getListasReservas() {
