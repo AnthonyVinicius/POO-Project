@@ -31,7 +31,7 @@ public class PagamentoCartao extends Pagamento {
 			System.out.println("Cliente: " + reserva.getCliente().getNome());
 			System.out.println("Cpf: " + reserva.getCliente().getCpf());
 			System.out.println("Forma de Pagamento: Cartão");
-			System.out.println("Desconto: 3%/m");
+			System.out.println("Desconto: 3%");
 			System.out.println("Numero do cartão:" + getNumero());
 			System.out.println("Tipo Cartão: " + getTipoCartao());
 
