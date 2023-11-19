@@ -37,7 +37,9 @@ public class Hotel {
 			System.out.println(reserva.getCliente().getNome());
 			for(Quarto quarto : reserva.getListaQuartos()) {
 				System.out.println(quarto.getNumero());
-				System.out.println(quarto.getCama().get(0));
+				for (Cama cama : quarto.getCama()) {
+					System.out.println(cama.getTipo());
+				}
 			}
 		}
 	}
