@@ -32,7 +32,7 @@ public class Hotel {
 	public void mostrarInformacoesReservas() {
 		int r = 1;
 		for (Reserva reserva : listaReservas) {
-			System.out.println(r + "°" + "Reserva: ");
+			System.out.println("\n" +r + "°" + "Reserva: ");
 			System.out.println("Data: " + reserva.getData());
 			System.out.println("Funcionario responsalvel: " + reserva.getFuncionario().getNome());
 			System.out.println("Setor: " + reserva.getFuncionario().getSetor());

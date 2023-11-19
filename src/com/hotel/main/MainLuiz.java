@@ -65,6 +65,7 @@ public class MainLuiz {
 
 		ArrayList<Reserva> listaReservas = new ArrayList<Reserva>();
 		listaReservas.add(reserva1);
+		listaReservas.add(reserva2);
 
 		Endereco enderecoHotel = new Endereco("Palmares", "Cohab 1", "Rua Z", "255");
 
