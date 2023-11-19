@@ -1,7 +1,5 @@
 package com.hotel.sistema;
 
-import java.util.ArrayList;
-
 import java.util.List;
 
 public class PagamentoDinheiro extends Pagamento {
@@ -21,9 +19,8 @@ public class PagamentoDinheiro extends Pagamento {
 
 	@Override
 	// TODO: Resolver esses B.O
-	protected void calcularPagamento() {
+	public void calcularPagamento() {
 		double somaTotal = 0;
-		ArrayList<Double> todosOsValores = new ArrayList<Double>();
 		for (Reserva reserva : listaDeReservas) {
 			System.out.println("---------------------------------------------------");
 			System.out.println("Cliente: " + reserva.getCliente().getNome());

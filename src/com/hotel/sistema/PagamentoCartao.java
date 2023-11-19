@@ -2,7 +2,6 @@
 package com.hotel.sistema;
 
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PagamentoCartao extends Pagamento {
@@ -27,11 +26,10 @@ public class PagamentoCartao extends Pagamento {
 	// calcular os juros somando com o valor base
 
 	@Override
-	protected void calcularPagamento() {
+	public void calcularPagamento() {
 
 		if (tipoCartao.equalsIgnoreCase("Debito")) {
 			double somaTotal = 0;
-			ArrayList<Double> todosOsValores = new ArrayList<Double>();
 			for (Reserva reserva : listaDeReservas) {
 				System.out.println("---------------------------------------------------");
 				System.out.println("Cliente: " + reserva.getCliente().getNome());
@@ -54,7 +52,6 @@ public class PagamentoCartao extends Pagamento {
 
 		} else if (tipoCartao.equalsIgnoreCase("Credito")) {
 			double somaTotal = 0;
-			ArrayList<Double> todosOsValores = new ArrayList<Double>();
 			for (Reserva reserva : listaDeReservas) {
 				System.out.println("---------------------------------------------------");
 				System.out.println("Cliente: " + reserva.getCliente().getNome());
@@ -77,7 +74,6 @@ public class PagamentoCartao extends Pagamento {
 		} else {
 			throw new InvalidParameterException("Tipo de Cartão invalido , tente novamente");
 		}
-
 	}
 
 	public String getNumero() {

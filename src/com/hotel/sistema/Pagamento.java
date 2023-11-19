@@ -28,8 +28,9 @@ public abstract class Pagamento {
 		this.metodoPagamento = getClass().getSimpleName();
 		this.listaDeReservas = listaDeReservas;
 	}
+	
 	// Assinatura
-	protected abstract void calcularPagamento();
+	public abstract void calcularPagamento();
 
 	public double getValorQuarto() {
 		return valorQuarto;
@@ -71,4 +72,3 @@ public abstract class Pagamento {
 		this.listaDeReservas = listaDeReservas;
 	}
 }
-
