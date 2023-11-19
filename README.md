@@ -14,6 +14,6 @@ Classes abstratas serão utilizadas para definir comportamentos padrão que deve
 
 
 div align="center"
-img src="https://github.com/AnthonyVinicius/POO-Project/assets/91100881/eec24594-b316-48b0-af18-62dc583cddad" width="0px" /
+img src="https://github.com/AnthonyVinicius/POO-Project/assets/91100881/eec24594-b316-48b0-af18-62dc583cddad.png" width="0px" /
 /div
 
