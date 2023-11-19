@@ -79,6 +79,7 @@ public class MainVini {
 			System.out.println("Funcionario responsalvel: " + reserva.getFuncionario().getNome());
 			System.out.println("Setor: " + reserva.getFuncionario().getSetor());
 			System.out.println("Cliente: " + reserva.getCliente().getNome());
+			System.out.println("CPF do cliente: " + reserva.getCliente().getCpf());
 			r++;
 
 			int q = 1;
