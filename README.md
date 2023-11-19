@@ -10,5 +10,9 @@ A herança será utilizada para estabelecer relações entre classes, promovendo
 Além disso, o conceito de polimorfismo será aplicado para permitir que objetos de diferentes classes possam ser tratados de maneira uniforme, simplificando o código e tornando-o mais flexível. 
 Classes abstratas serão utilizadas para definir comportamentos padrão que devem ser implementados por subclasses, garantindo uma estrutura coerente no sistema.
 
-![Diagrama](github.com/AnthonyVinicius/POO-Project/assets/91100881/f01453e1-2e70-43fd-9c83-055b4cf49c2a.png)
+div align="center"
+img src="[https://desblogada.files.wordpress.co..." width="0px](https://github.com/AnthonyVinicius/POO-Project/assets/91100881/b7ff0547-0e68-41e1-a672-c5f1ffa890c5)https://github.com/AnthonyVinicius/POO-Project/assets/91100881/b7ff0547-0e68-41e1-a672-c5f1ffa890c5" /
+/div
+
+
 
