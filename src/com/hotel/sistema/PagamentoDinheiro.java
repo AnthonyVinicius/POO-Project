@@ -27,18 +27,19 @@ public class PagamentoDinheiro extends Pagamento {
 			System.out.println("Cpf: " + reserva.getCliente().getCpf());
 
 			for (Quarto quarto : reserva.getListaQuartos()) {
-				System.out.println("Quarto : " + valorQuarto);
+				System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
 				somaTotal += valorQuarto;
 
 				for (Cama cama : quarto.getCama()) {
-					System.out.println("Cama : " + valorCama);
+					System.out.printf("Cama:------------R$%.2f\n", valorCama);
 					somaTotal += valorCama;
 
 				}
 			}
 			valorFinal = somaTotal - somaTotal * 0.03;
-			System.out.println("Total: " + valorFinal);
-			System.out.println("--------------------------------------------------------------");
+			System.out.printf("\nValor Bruto:-----R$%.2f", somaTotal);
+			System.out.printf("\nValor Final:-----R$%.2f", valorFinal);
+			System.out.println("\n--------------------------------------------------------------");
 		}
 	}
 
