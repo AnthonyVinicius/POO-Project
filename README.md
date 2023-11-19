@@ -9,3 +9,5 @@ Cada classe no sistema terá uma função específica e será projetada para cum
 A herança será utilizada para estabelecer relações entre classes, promovendo a reutilização de código e a organização hierárquica das funcionalidades do sistema.
 Além disso, o conceito de polimorfismo será aplicado para permitir que objetos de diferentes classes possam ser tratados de maneira uniforme, simplificando o código e tornando-o mais flexível. 
 Classes abstratas serão utilizadas para definir comportamentos padrão que devem ser implementados por subclasses, garantindo uma estrutura coerente no sistema.
+
+![Texto Alternativo](E:\Projetos Programação\Projetos\Diagrama.png)
