@@ -11,7 +11,7 @@ public abstract class Pagamento {
 	
 	protected String dataPagamento;
 	protected String metodoPagamento;
-	protected List<Reserva> listaDeReservas;
+	protected Reserva reserva;
 
 	public Pagamento() {
 		// TODO Auto-generated constructor stub]
@@ -20,13 +20,13 @@ public abstract class Pagamento {
 		this.metodoPagamento = getClass().getSimpleName();
 	}
 
-	public Pagamento(String dataPagamento, List<Reserva> listaDeReservas) {
+	public Pagamento(String dataPagamento, Reserva reserva) {
 		super();
 		this.valorQuarto = 125;
 		this.valorCama = 25;
 		this.dataPagamento = dataPagamento;
 		this.metodoPagamento = getClass().getSimpleName();
-		this.listaDeReservas = listaDeReservas;
+		this.reserva = reserva;
 	}
 	
 	// Assinatura
@@ -64,11 +64,11 @@ public abstract class Pagamento {
 		this.metodoPagamento = metodoPagamento;
 	}
 
-	public List<Reserva> getListaDeReservas() {
-		return listaDeReservas;
+	public Reserva getReserva() {
+		return reserva;
 	}
 
-	public void setListaDeReservas(List<Reserva> listaDeReservas) {
-		this.listaDeReservas = listaDeReservas;
-	}
+	public void setReserva(Reserva reserva) {
+		this.reserva = reserva;
+	}	
 }

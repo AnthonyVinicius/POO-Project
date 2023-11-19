@@ -15,8 +15,8 @@ public class PagamentoCartao extends Pagamento {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PagamentoCartao(String dataPagamento, List<Reserva> listaDeReservas, String numero, String tipoCartao) {
-		super(dataPagamento, listaDeReservas);
+	public PagamentoCartao(String dataPagamento, Reserva reserva, String numero, String tipoCartao) {
+		super(dataPagamento, reserva);
 		this.numero = numero;
 		this.tipoCartao = tipoCartao;
 		this.valorFinal = 0;
@@ -30,54 +30,50 @@ public class PagamentoCartao extends Pagamento {
 
 		if (tipoCartao.equalsIgnoreCase("Debito")) {
 			double somaTotal = 0;
-			for (Reserva reserva : listaDeReservas) {
-				System.out.println("---------------------------------------------------");
-				System.out.println("Cliente: " + reserva.getCliente().getNome());
-				System.out.println("Cpf: " + reserva.getCliente().getCpf());
-				System.out.println("Numero do cartão:" + getNumero());
-				System.out.println("Tipo Cartão: " + getMetodoPagamento());
+			System.out.println("---------------------------------------------------");
+			System.out.println("Cliente: " + reserva.getCliente().getNome());
+			System.out.println("Cpf: " + reserva.getCliente().getCpf());
+			System.out.println("Numero do cartão:" + getNumero());
+			System.out.println("Tipo Cartão: " + getMetodoPagamento());
 
-				for (Quarto quarto : reserva.getListaQuartos()) {
-					System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
-					somaTotal += valorQuarto;
+			for (Quarto quarto : reserva.getListaQuartos()) {
+				System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
+				somaTotal += valorQuarto;
 
-					for (Cama cama : quarto.getCama()) {
-						System.out.printf("Cama:------------R$%.2f\n", valorCama);
-						somaTotal += valorCama;
+				for (Cama cama : quarto.getCama()) {
+					System.out.printf("Cama:------------R$%.2f\n", valorCama);
+					somaTotal += valorCama;
 
-					}
 				}
-				valorFinal = somaTotal - somaTotal * 0.03;
-				System.out.printf("\nValor Bruto:-----R$%.2f", somaTotal);
-				System.out.printf("\nValor Final:-----R$%.2f", valorFinal);
-				System.out.println("\n--------------------------------------------------------------");
 			}
+			valorFinal = somaTotal - somaTotal * 0.03;
+			System.out.printf("\nValor Bruto:-----R$%.2f", somaTotal);
+			System.out.printf("\nValor Final:-----R$%.2f", valorFinal);
+			System.out.println("\n--------------------------------------------------------------");
 
 		} else if (tipoCartao.equalsIgnoreCase("Credito")) {
 			double somaTotal = 0;
-			for (Reserva reserva : listaDeReservas) {
-				System.out.println("---------------------------------------------------");
-				System.out.println("Cliente: " + reserva.getCliente().getNome());
-				System.out.println("Cpf: " + reserva.getCliente().getCpf());
-				System.out.println("Numero do cartão:" + getNumero());
-				System.out.println("Tipo Cartão: " + getMetodoPagamento());
+			System.out.println("---------------------------------------------------");
+			System.out.println("Cliente: " + reserva.getCliente().getNome());
+			System.out.println("Cpf: " + reserva.getCliente().getCpf());
+			System.out.println("Numero do cartão:" + getNumero());
+			System.out.println("Tipo Cartão: " + getMetodoPagamento());
 
-				for (Quarto quarto : reserva.getListaQuartos()) {
-					System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
-					somaTotal += valorQuarto;
+			for (Quarto quarto : reserva.getListaQuartos()) {
+				System.out.printf("Quarto:---------R$%.2f\n", valorQuarto);
+				somaTotal += valorQuarto;
 
-					for (Cama cama : quarto.getCama()) {
-						System.out.printf("Cama:------------R$%.2f\n", valorCama);
-						somaTotal += valorCama;
+				for (Cama cama : quarto.getCama()) {
+					System.out.printf("Cama:------------R$%.2f\n", valorCama);
+					somaTotal += valorCama;
 
-					}
 				}
-				valorFinal = somaTotal + somaTotal * 0.05;
-				System.out.printf("\nValor Bruto:-----R$%.2f", somaTotal);
-				System.out.printf("\nValor Final:-----R$%.2f", valorFinal);
-				System.out.println("\n--------------------------------------------------------------");
-
 			}
+			valorFinal = somaTotal + somaTotal * 0.05;
+			System.out.printf("\nValor Bruto:-----R$%.2f", somaTotal);
+			System.out.printf("\nValor Final:-----R$%.2f", valorFinal);
+			System.out.println("\n--------------------------------------------------------------");
+
 		} else {
 			throw new InvalidParameterException("Tipo de Cartão invalido , tente novamente");
 		}
