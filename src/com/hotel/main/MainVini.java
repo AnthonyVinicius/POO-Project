@@ -49,13 +49,13 @@ public class MainVini {
 		Cliente clienteR2 = new Cliente("Vinicius", "776.546.345-78", enderecoC2, telefoneC2, "vini@gmail.com", null, reservas);
 	
 		Cama camaR2 = new Cama("Duplo");
-		camasR2.add(camaR1);
+		camasR2.add(camaR2);
 		
 		Cama cama1R2 = new Cama("Simples");
-		camasR2.add(cama1R1);
+		camasR2.add(cama1R2);
 		
 		Quarto quarto2 = new Quarto(5, camasR2);
-		quartosR2.add(quarto1);
+		quartosR2.add(quarto2);
 		
 		Reserva reserva2 = new Reserva("23/12/2023", quartosR2, funcionario, clienteR2, null);
 		
