@@ -10,7 +10,8 @@ A herança será utilizada para estabelecer relações entre classes, promovendo
 Além disso, o conceito de polimorfismo será aplicado para permitir que objetos de diferentes classes possam ser tratados de maneira uniforme, simplificando o código e tornando-o mais flexível. 
 Classes abstratas serão utilizadas para definir comportamentos padrão que devem ser implementados por subclasses, garantindo uma estrutura coerente no sistema.
 
-![Classe UML (1)](https://github.com/AnthonyVinicius/POO-Project/assets/91100881/bb64720a-d126-407f-8e5e-d4b17d6ee9ad)
+![Classe UML](https://github.com/AnthonyVinicius/POO-Project/assets/91100881/50fc5ef2-c645-4755-84cd-09e367afe3a3)
+
 
 
 
