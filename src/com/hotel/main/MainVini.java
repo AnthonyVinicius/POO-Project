@@ -67,6 +67,8 @@ public class MainVini {
 		ArrayList<Telefone> TelefoneHotel = new ArrayList<Telefone>();
 		
 		Telefone telefoneH = new Telefone("81", "3661-0897");
+		TelefoneHotel.add(telefoneH);
+		
 		Endereco enderecoH = new Endereco("Palmares", "Centro", "Rua Letácio Montenegro", "145");
 		
 		Hotel hotel = new Hotel("Hotel Estrelas", "534.345.876.213", enderecoH, gerente, TelefoneHotel, reservas);
