@@ -31,6 +31,7 @@ public class Hotel {
 
 	public void mostrarInformacoesReservas() {
 		int r = 1;
+		System.out.println("Hotel: " + getNome());
 		for (Reserva reserva : listaReservas) {
 			System.out.println("\n" +r + "°" + "Reserva: ");
 			System.out.println("Data: " + reserva.getData());
@@ -99,5 +100,4 @@ public class Hotel {
 	public void setListaReservas(List<Reserva> listaReservas) {
 		this.listaReservas = listaReservas;
 	}
-
 }

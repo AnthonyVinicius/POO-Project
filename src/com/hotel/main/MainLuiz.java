@@ -19,8 +19,7 @@ public class MainLuiz {
 
 		ArrayList<Quarto> listaQuartosR1 = new ArrayList<Quarto>();
 		listaQuartosR1.add(new Quarto(11, new ArrayList<Cama>(Arrays.asList(new Cama("Dupla")))));
-		listaQuartosR1
-				.add(new Quarto(12, new ArrayList<Cama>(Arrays.asList(new Cama("Simples"), new Cama("Simples")))));
+		listaQuartosR1.add(new Quarto(12, new ArrayList<Cama>(Arrays.asList(new Cama("Simples"), new Cama("Simples")))));
 
 		Endereco enderecoClienteR1 = new Endereco("Recife", "Boa Viagem", "Machado 98", "68");
 		Telefone telefoneClienteR1 = new Telefone("81", "98568-4513");
@@ -72,8 +71,7 @@ public class MainLuiz {
 		Hotel hotel = new Hotel("Palace Hotel", "12.345.678/0001-00", enderecoHotel, gerenteHotel, listaTelefonesHotel,
 				listaReservas);
 
-		// Apresentação
-		// -------------------------------------------------------------------------------------------------------------------------------
+		// Apresentação-------------------------------------------------------------------------------------------------
 
 		System.out.println("Hotel: " + hotel.getNome());
 		System.out.println("Cnpj: " + hotel.getCnpj());
